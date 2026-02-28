@@ -1,75 +1,70 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% block title %}Nurbek Muxitdinov{% endblock %}</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0a0a0a;
-    --surface: #111111;
-    --surface2: #1a1a1a;
-    --accent: #3b82f6; /* Ko'k rang */
-    --accent-dark: #1e40af;
-    --text: #f0f0f0;
-    --muted: #666;
-    --border: #222;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Nurbek Muxitdinov{% endblock %}</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --surface: #111111;
+            --surface2: #1a1a1a;
+            --accent: #3b82f6; 
+            --accent-dark: #1e40af;
+            --text: #f0f0f0;
+            --muted: #666;
+            --border: #222;
+        }
 
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 24px 60px; background: rgba(10,10,10,0.85); backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; }
-  .nav-logo span { color: var(--accent); }
-  .nav-cta { background: var(--accent); color: #fff; padding: 10px 24px; font-size: 13px; font-weight: 500; text-decoration: none; transition: 0.3s; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            overflow-x: hidden;
+        }
 
-  /* LOYIHALAR CARD STYLES */
-  .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-  .project-card { background: var(--bg); border: 1px solid var(--border); overflow: hidden; transition: all 0.3s; cursor: pointer; }
-  .project-card:hover { border-color: var(--accent); transform: translateY(-6px); }
-  .project-thumb { height: 200px; background: var(--surface2); display: flex; align-items: center; justify-content: center; position: relative; }
-  .project-thumb-num { font-family: 'Syne', sans-serif; font-size: 72px; font-weight: 800; color: var(--border); transition: 0.3s; }
-  .project-card:hover .project-thumb-num { color: var(--accent); opacity: 0.3; }
-  .project-thumb-tag { position: absolute; top: 16px; left: 16px; background: var(--accent); color: #fff; font-size: 10px; font-weight: 700; padding: 4px 10px; text-transform: uppercase; }
-  .project-body { padding: 24px; }
-  .project-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
-  .project-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
-  .tag { background: var(--surface2); border: 1px solid var(--border); padding: 4px 10px; font-size: 11px; color: var(--muted); margin-right: 5px; }
+        /* Navigatsiya stili */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 24px 60px; background: rgba(10,10,10,0.85); backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
 
-  /* FOOTER */
-  footer { background: var(--surface); border-top: 1px solid var(--border); padding: 32px 60px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; }
+        .nav-logo span { color: var(--accent); }
 
-  /* ANIMATIONS */
-  .fade-up { opacity: 0; transform: translateY(30px); transition: 0.6s ease forwards; }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-  @media (max-width: 900px) {
-    nav { padding: 20px 24px; }
-    footer { flex-direction: column; gap: 16px; }
-    .projects-grid { grid-template-columns: 1fr; }
-  }
-</style>
+        /* Animatsiyalar */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+    </style>
 </head>
 <body>
     <nav>
         <div class="nav-logo">N<span>.</span>M</div>
-        <a href="#contact" class="nav-cta">Bog'lanish →</a>
+        <div style="display: flex; gap: 20px;">
+            <a href="/" style="color: var(--muted); text-decoration: none; font-size: 14px;">Asosiy</a>
+            <a href="/projects" style="color: var(--muted); text-decoration: none; font-size: 14px;">Loyihalar</a>
+        </div>
+        <a href="/#contact" style="background: var(--accent); color: white; padding: 8px 20px; text-decoration: none; font-size: 13px; font-weight: 600;">Aloqa</a>
     </nav>
 
-    {% block body %}{% endblock %}
+    <main>
+        {% block body %}{% endblock %}
+    </main>
 
-    <footer>
-        <div class="nav-logo">Nurbek<span>.</span>M</div>
-        <p style="color: var(--muted); font-size: 13px;">© 2026 — Barcha huquqlar himoyalangan</p>
+    <footer style="background: var(--surface); border-top: 1px solid var(--border); padding: 40px 60px; text-align: center;">
+        <p style="color: var(--muted); font-size: 13px;">© 2026 Nurbek Muxitdinov. Barcha huquqlar himoyalangan.</p>
     </footer>
 
     <script>
