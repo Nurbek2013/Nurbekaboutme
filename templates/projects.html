@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Loyihalar | Nurbek Muxitdinov{% endblock %}
+
+{% block body %}
+<section style="padding: 120px 60px; background: var(--surface);">
+    <div class="fade-up" style="margin-bottom: 60px;">
+        <p style="color: var(--accent); font-size: 11px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 16px;">Loyihalar</p>
+        <h2 style="font-family: 'Syne', sans-serif; font-size: 52px; font-weight: 800; letter-spacing: -2px; line-height: 1.05;">Tanlangan<br>Ishlar</h2>
+    </div>
+
+    <div class="projects-grid">
+        <div class="project-card fade-up">
+            <div class="project-thumb">
+                <div class="project-thumb-num">01</div>
+                <div class="project-thumb-tag">Flask</div>
+            </div>
+            <div class="project-body">
+                <div class="project-title">Sensorika Academy</div>
+                <div class="project-desc">O'quv markazi uchun Flask yordamida yaratilgan zamonaviy veb-sayt.</div>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Flask</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card fade-up">
+            <div class="project-thumb">
+                <div class="project-thumb-num">02</div>
+                <div class="project-thumb-tag">Bot</div>
+            </div>
+            <div class="project-body">
+                <div class="project-title">YT Downloader Bot</div>
+                <div class="project-desc">YouTube videolarini yuklab oluvchi Telegram bot loyihasi.</div>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Bot API</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card fade-up">
+            <div class="project-thumb">
+                <div class="project-thumb-num">03</div>
+                <div class="project-thumb-tag">Game</div>
+            </div>
+            <div class="project-body">
+                <div class="project-title">3D Obby Game</div>
+                <div class="project-desc">Ursina engine orqali yaratilgan Python 3D o'yini.</div>
+                <div class="project-tags">
+                    <span class="tag">Ursina</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

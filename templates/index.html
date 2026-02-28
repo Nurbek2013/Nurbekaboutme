@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Nurbek Muxitdinov | Python Developer{% endblock %}
+
+{% block body %}
+<section id="hero" style="position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+  <div class="hero-noise" style="position: absolute; inset: 0; background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\' opacity=\'0.04\'/%3E%3C/svg%3E'); pointer-events: none;"></div>
+  
+  <div class="fade-up">
+    <div class="hero-tag" style="display: inline-flex; align-items: center; gap: 8px; background: var(--surface2); border: 1px solid var(--border); padding: 6px 14px; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 28px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block;"></span> Mavjud — Ishlashga tayyor
+    </div>
+    
+    <h1 class="hero-title" style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(52px, 6vw, 88px); line-height: 0.95; letter-spacing: -3px; margin-bottom: 28px;">
+      Nurbek<br>
+      <span style="color: var(--accent);">Muxitdinov</span><br>
+      <span style="color: var(--muted); font-weight: 400; font-style: italic; font-family: 'DM Sans', sans-serif; font-size: 0.55em; letter-spacing: -1px;">Python & Flask Developer</span>
+    </h1>
+    
+    <p style="color: var(--muted); font-size: 16px; line-height: 1.7; max-width: 400px; margin-bottom: 40px;">
+      Python dasturlash tili orqali murakkab backend tizimlar va foydali Telegram botlar yarataman.
+      Sensorika Academy loyihasi ustida ishlayman.
+    </p>
+    
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="/projects" style="background: var(--accent); color: #fff; padding: 14px 32px; font-family: 'Syne', sans-serif; font-weight: 700; text-decoration: none; border: 2px solid var(--accent); transition: 0.3s;">Loyihalarni ko'rish</a>
+      <a href="#contact" style="background: transparent; color: var(--text); padding: 14px 32px; font-family: 'Syne', sans-serif; font-weight: 700; text-decoration: none; border: 2px solid var(--border); transition: 0.3s;">Bog'lanish</a>
+    </div>
+  </div>
+
+  <div class="hero-visual fade-up" style="position: relative; display: flex; justify-content: center; align-items: center;">
+    <div class="hero-avatar-wrap" style="position: relative; width: 340px; height: 400px;">
+      <div class="hero-avatar-bg" style="position: absolute; inset: 0; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); clip-path: polygon(10% 0%, 90% 5%, 100% 85%, 80% 100%, 0% 95%);"></div>
+      <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-size: 96px; font-weight: 800; color: var(--accent); z-index: 2;">NM</div>
+      <div style="position: absolute; bottom: 20px; right: -20px; background: var(--surface); border: 1px solid var(--border); padding: 12px 20px; font-size: 12px; color: var(--muted);">
+        <strong style="display: block; font-family: 'Syne', sans-serif; font-size: 22px; color: var(--accent);">2026</strong> Navoiy, Uzb
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background: var(--surface); padding: 120px 60px; border-top: 1px solid var(--border);">
+  <div class="fade-up">
+    <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 3px; color: var(--accent); margin-bottom: 16px;">Haqimda</p>
+    <h2 style="font-family: 'Syne', sans-serif; font-size: 52px; font-weight: 800; letter-spacing: -2px; line-height: 1.05; margin-bottom: 24px;">Ijodkor va<br>Dasturchi</h2>
+    <p style="color: var(--muted); font-size: 18px; line-height: 1.8; max-width: 600px;">
+      Python va Flask yordamida zamonaviy veb-ilovalarni noldan quraman. 
+      Har bir loyihada kod sifati va qulay dizaynga e'tibor qaratish mening asosiy tamoyilimdir.
+    </p>
+  </div>
+</section>
+{% endblock %}
